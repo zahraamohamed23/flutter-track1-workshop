@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp (const LighterScreen());
+void main() {
+  runApp(const HomePage());
 }
 
-class LighterScreen extends StatelessWidget {
-  const LighterScreen({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LighterScreen(),
+    return const Scaffold(
+      body: Center(
+        child:  Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.lightbulb ,
+            size: 200,
+            color: Colors.red,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
